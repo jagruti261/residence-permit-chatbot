@@ -7,12 +7,12 @@ This PoC answers questions like application status, required documents, and next
 
 ## ✨ Features
 
-- 🔹 Chat-based interface for applicants
-- 🔍 Understands questions like “What is the status of my application?”
-- 📄 Provides status updates, required documents, and next steps
-- 🧠 Uses AI intent recognition (with open-source NLP)
-- ⚙️ Built with React (frontend) + Node.js Express (backend)
-- 📦 Mock data stored locally (no database needed)
+-  Chat-based interface for applicants
+-  Understands questions like “What is the status of my application?”
+-  Provides status updates, required documents, and next steps
+-  Uses AI intent recognition (with open-source NLP)
+-  Built with React (frontend) + Node.js Express (backend)
+-  Mock data stored locally (no database needed)
 
 ---
 
