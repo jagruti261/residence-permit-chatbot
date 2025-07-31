@@ -1,0 +1,16 @@
+[
+    {
+      "id": "A123",
+      "name": "John Doe",
+      "status": "In Review",
+      "missingDocuments": ["Proof of Residence", "Health Insurance"],
+      "nextStep": "Upload missing documents"
+    },
+    {
+      "id": "B456",
+      "name": "Jane Smith",
+      "status": "Awaiting Appointment",
+      "missingDocuments": [],
+      "nextStep": "Attend biometric appointment"
+    }
+  ]

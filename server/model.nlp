@@ -1,0 +1,548 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "applic,is,my,of,status,the,what": {
+            "intent": "status",
+            "domain": "default"
+          },
+          "applic,me,my,status,tell": {
+            "intent": "status",
+            "domain": "default"
+          },
+          "applic,is,my,where": {
+            "intent": "status",
+            "domain": "default"
+          },
+          "do,document,i,need,which": {
+            "intent": "missing_docs",
+            "domain": "default"
+          },
+          "are,document,miss,what": {
+            "intent": "missing_docs",
+            "domain": "default"
+          },
+          "are,next,step,the,what": {
+            "intent": "next_steps",
+            "domain": "default"
+          },
+          "do,how,i,proceed": {
+            "intent": "next_steps",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "status": "default",
+          "missing_docs": "default",
+          "next_steps": "default",
+          "greetings": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "What is the status of my application?",
+            "intent": "status"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me my application status",
+            "intent": "status"
+          },
+          {
+            "domain": "default",
+            "utterance": "Where is my application?",
+            "intent": "status"
+          },
+          {
+            "domain": "default",
+            "utterance": "Which documents do I need?",
+            "intent": "missing_docs"
+          },
+          {
+            "domain": "default",
+            "utterance": "What documents are missing?",
+            "intent": "missing_docs"
+          },
+          {
+            "domain": "default",
+            "utterance": "What are the next steps?",
+            "intent": "next_steps"
+          },
+          {
+            "domain": "default",
+            "utterance": "How do I proceed?",
+            "intent": "next_steps"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hey",
+            "intent": "greetings"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "what": 1,
+              "is": 1,
+              "the": 1,
+              "status": 1,
+              "of": 1,
+              "my": 1,
+              "applic": 1,
+              "tell": 1,
+              "me": 1,
+              "where": 1,
+              "which": 1,
+              "document": 1,
+              "do": 1,
+              "i": 1,
+              "need": 1,
+              "are": 1,
+              "miss": 1,
+              "next": 1,
+              "step": 1,
+              "how": 1,
+              "proceed": 1,
+              "hello": 1,
+              "hi": 1,
+              "hey": 1
+            },
+            "intents": {
+              "status": 1,
+              "missing_docs": 1,
+              "next_steps": 1,
+              "greetings": 1
+            },
+            "intentFeatures": {
+              "status": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "status": 1,
+                "of": 1,
+                "my": 1,
+                "applic": 1,
+                "tell": 1,
+                "me": 1,
+                "where": 1
+              },
+              "missing_docs": {
+                "which": 1,
+                "document": 1,
+                "do": 1,
+                "i": 1,
+                "need": 1,
+                "what": 1,
+                "are": 1,
+                "miss": 1
+              },
+              "next_steps": {
+                "what": 1,
+                "are": 1,
+                "the": 1,
+                "next": 1,
+                "step": 1,
+                "how": 1,
+                "do": 1,
+                "i": 1,
+                "proceed": 1
+              },
+              "greetings": {
+                "hello": 1,
+                "hi": 1,
+                "hey": 1
+              }
+            },
+            "featuresToIntent": {
+              "what": [
+                "status",
+                "missing_docs",
+                "next_steps"
+              ],
+              "is": [
+                "status"
+              ],
+              "the": [
+                "status",
+                "next_steps"
+              ],
+              "status": [
+                "status"
+              ],
+              "of": [
+                "status"
+              ],
+              "my": [
+                "status"
+              ],
+              "applic": [
+                "status"
+              ],
+              "tell": [
+                "status"
+              ],
+              "me": [
+                "status"
+              ],
+              "where": [
+                "status"
+              ],
+              "which": [
+                "missing_docs"
+              ],
+              "document": [
+                "missing_docs"
+              ],
+              "do": [
+                "missing_docs",
+                "next_steps"
+              ],
+              "i": [
+                "missing_docs",
+                "next_steps"
+              ],
+              "need": [
+                "missing_docs"
+              ],
+              "are": [
+                "missing_docs",
+                "next_steps"
+              ],
+              "miss": [
+                "missing_docs"
+              ],
+              "next": [
+                "next_steps"
+              ],
+              "step": [
+                "next_steps"
+              ],
+              "how": [
+                "next_steps"
+              ],
+              "proceed": [
+                "next_steps"
+              ],
+              "hello": [
+                "greetings"
+              ],
+              "hi": [
+                "greetings"
+              ],
+              "hey": [
+                "greetings"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "what",
+                "is",
+                "the",
+                "status",
+                "of",
+                "my",
+                "applic",
+                "tell",
+                "me",
+                "where",
+                "which",
+                "document",
+                "do",
+                "i",
+                "need",
+                "are",
+                "miss",
+                "next",
+                "step",
+                "how",
+                "proceed",
+                "hello",
+                "hi",
+                "hey"
+              ],
+              "intents": [
+                "status",
+                "missing_docs",
+                "next_steps",
+                "greetings"
+              ],
+              "perceptrons": [
+                [
+                  -0.26241225004196167,
+                  2.770975112915039,
+                  0.05086054280400276,
+                  2.0201942920684814,
+                  0.49676448106765747,
+                  4.295344352722168,
+                  4.295344352722168,
+                  1.5246502161026,
+                  1.5246502161026,
+                  2.273623466491699,
+                  -0.17752012610435486,
+                  -0.5024542808532715,
+                  -0.4079118072986603,
+                  -0.4079118072986603,
+                  -0.17752012610435486,
+                  -0.7042772173881531,
+                  -0.26778650283813477,
+                  -0.3617068827152252,
+                  -0.3617068827152252,
+                  -0.17696362733840942,
+                  -0.17696362733840942,
+                  -0.6216191053390503,
+                  -0.6142982840538025,
+                  -0.6068706512451172,
+                  0.6281852908593181
+                ],
+                [
+                  1.839447259902954,
+                  -0.29482659697532654,
+                  -1.7081280946731567,
+                  -0.3087407946586609,
+                  -0.21254025399684906,
+                  -0.36171337962150574,
+                  -0.36171337962150574,
+                  -0.04155898094177246,
+                  -0.04155898094177246,
+                  -0.029338320717215538,
+                  2.6329996585845947,
+                  6.1834330558776855,
+                  1.1245026588439941,
+                  1.1245026588439941,
+                  2.6329996585845947,
+                  2.124657154083252,
+                  3.5496666431427,
+                  -1.422866702079773,
+                  -1.422866702079773,
+                  -1.4836360216140747,
+                  -1.4836360216140747,
+                  -0.5751665234565735,
+                  -0.568024218082428,
+                  -0.560796856880188,
+                  0.5826176904441608
+                ],
+                [
+                  1.3134422302246094,
+                  -0.9637284278869629,
+                  2.6965627670288086,
+                  -0.9831085801124573,
+                  -0.8967130184173584,
+                  -1.0499322414398193,
+                  -1.0499322414398193,
+                  -0.052513040602207184,
+                  -0.052513040602207184,
+                  -0.04100307077169418,
+                  -1.5521124601364136,
+                  -2.9499361515045166,
+                  2.5966403484344482,
+                  2.5966403484344482,
+                  -1.5521124601364136,
+                  2.2495365142822266,
+                  -1.380879282951355,
+                  3.632638454437256,
+                  3.632638454437256,
+                  4.1653032302856445,
+                  4.1653032302856445,
+                  -0.7544205188751221,
+                  -0.7452989220619202,
+                  -0.7360514998435974,
+                  0.7583098852435601
+                ],
+                [
+                  -2.256640911102295,
+                  -1.4417250156402588,
+                  -1.1642389297485352,
+                  -1.0893300771713257,
+                  -0.21753919124603271,
+                  -2.2425537109375,
+                  -2.2425537109375,
+                  -0.7951281070709229,
+                  -0.7951281070709229,
+                  -1.147523045539856,
+                  -0.6937911510467529,
+                  -1.7943354845046997,
+                  -2.1260528564453125,
+                  -2.1260528564453125,
+                  -0.6937911510467529,
+                  -1.962438941001892,
+                  -1.0842622518539429,
+                  -0.8700370192527771,
+                  -0.8700370192527771,
+                  -1.4159746170043945,
+                  -1.4159746170043945,
+                  6.821755886077881,
+                  6.931837558746338,
+                  6.845685958862305,
+                  7.1715334640845025
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "What is the status of my application?"
+      ],
+      [
+        "en",
+        "Tell me my application status"
+      ],
+      [
+        "en",
+        "Where is my application?"
+      ],
+      [
+        "en",
+        "Which documents do I need?"
+      ],
+      [
+        "en",
+        "What documents are missing?"
+      ],
+      [
+        "en",
+        "What are the next steps?"
+      ],
+      [
+        "en",
+        "How do I proceed?"
+      ],
+      [
+        "en",
+        "Hello"
+      ],
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "en",
+        "Hey"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "status": [
+          {
+            "answer": "Your application is currently being reviewed."
+          }
+        ],
+        "missing_docs": [
+          {
+            "answer": "You still need to upload: Proof of Residence and Health Insurance."
+          }
+        ],
+        "next_steps": [
+          {
+            "answer": "Please wait for notification after the review is complete."
+          }
+        ],
+        "greetings": [
+          {
+            "answer": "Hello! How can I assist you today?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

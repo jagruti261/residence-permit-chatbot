@@ -1,0 +1,15 @@
+{
+    "name": "residence-helper-server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "body-parser": "^2.2.0",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "node-nlp": "^5.0.0-alpha.5"
+    }
+}
