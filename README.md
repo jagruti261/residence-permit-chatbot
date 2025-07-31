@@ -1,23 +1,24 @@
-# Residence Permit Chatbot (Challenge B Submission)
+# 🧠 Residence Permit Chatbot – Fullstack PoC
 
-This is a fullstack Proof-of-Concept to automate 90% of communication between applicants and the Ausländerbehörde.
+A chatbot proof-of-concept to automate ~90% of common communications between applicants and the Ausländerbehörde (Immigration Office).  
+This PoC answers questions like application status, required documents, and next steps using mock data and intent recognition.
 
-## 🧠 Strategy
+---
 
-This chatbot allows users to ask common questions such as:
+## ✨ Features
 
-- What is my application status?
-- What documents are missing?
-- What are the next steps?
+- 🔹 Chat-based interface for applicants
+- 🔍 Understands questions like “What is the status of my application?”
+- 📄 Provides status updates, required documents, and next steps
+- 🧠 Uses AI intent recognition (with open-source NLP)
+- ⚙️ Built with React (frontend) + Node.js Express (backend)
+- 📦 Mock data stored locally (no database needed)
 
-Built using:
-- **React (Frontend)**
-- **Node.js + Express (Backend)**
-- **node-nlp** for local NLP intent recognition (no OpenAI needed)
+---
 
-## 📦 How to Run
+## 🚀 Getting Started
 
-### 1. Start Backend
+### 1. Start the Backend
 
 ```bash
 cd backend
